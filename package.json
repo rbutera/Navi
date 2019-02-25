@@ -6,5 +6,38 @@
   "repository": "https://github.com/raigasm/navi",
   "author": "Rai Butera <rai@rbutera.com>",
   "license": "CC-BY-NC-ND-4.0",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "rx-dom": "^7.0.3",
+    "rxjs": "^6.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/react": "^4.1.13",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-config-react-app": "^3.0.7",
+    "eslint-import-resolver-webpack": "^0.11.0",
+    "eslint-plugin-flowtype": "^2.50.3",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^1.16.4",
+    "react-hot-loader": "^4.7.1",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.0"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "sb": "start-storybook -p 9001 -c .storybook"
+  }
 }
