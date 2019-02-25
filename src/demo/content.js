@@ -174,7 +174,7 @@ function DemoFooter() {
 
 export default function DemoContent() {
   return (
-    <div className="container">
+    <div id="demo-content">
       <section className="hero is-link is-small">
         <div className="hero-body">
           <div className="container">

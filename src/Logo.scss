@@ -1,0 +1,16 @@
+.navi-hero {
+  z-index: 90;
+}
+
+#navi-root {
+  .navi-logo {
+    display: block;
+  }
+  .navi-logo img {
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6px;
+  }
+}

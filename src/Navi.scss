@@ -1,13 +1,29 @@
 @charset "utf-8";
 
-div.navi-root {
-  .navi.navi-expanded {
-    .navbar-item img {
-      max-height: none;
+div#navi-root {
+  .navi-hero {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+  }
+  &.navi.navi-expanded {
+    nav.navbar {
+      background: none;
     }
+    .navi-hero {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: cyan;
+      height: 100vh;
+    }
+  }
 
-    .navbar-menu .navbar-item {
-      max-height: 75px;
-    }
+  &.navi.navi-collapsed .navi-hero {
+    background: none;
+    height: 52px;
   }
 }
