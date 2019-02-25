@@ -1,11 +1,40 @@
 import React, { Component } from 'react';
+import fairy from '../logo/v2/fairy.svg';
+import './Navi.scss';
+
+/**
+ * logoOptions:
+ * {
+ *  height: {
+ *    collapsed,
+ *    expanded
+ *  }
+ *  width: {
+ *    collapsed,
+ *    expanded
+ *  }
+ * }
+ */
 
 export class Navi extends Component {
   constructor(props) {
     super(props);
-    const { collapsed = false } = props;
+    const {
+      collapsed = false,
+      logoOptions = {
+        height: {
+          expanded: 'auto',
+          collapsed: '50px'
+        },
+        width: {
+          expanded: '50vw',
+          collapsed: '85px'
+        }
+      }
+    } = props;
     this.state = {
-      collapsed
+      collapsed,
+      logoOptions
     };
   }
 
@@ -18,24 +47,21 @@ export class Navi extends Component {
   };
 
   render() {
-    const { collapsed } = this.state;
+    const { collapsed, logoOptions } = this.state;
     const { children } = this.props;
+
+    const logoWidth = collapsed ? logoOptions.width.collapsed : logoOptions.width.expanded;
+    const logoHeight = collapsed ? logoOptions.height.collapsed : logoOptions.height.expanded;
     return (
-      <div id="navi" className={collapsed ? 'collapsed' : 'expanded'}>
-        <nav className="navbar" role="navigation">
-          <div className="navbar-brand">
-            <a className="navbar-item" href="https://bulma.io">
-              <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
-            </a>
-
-            <a role="button" className="navbar-burger burger">
-              <span />
-              <span />
-              <span />
-            </a>
-          </div>
-
-          <div id="navbarBasicExample" className="navbar-menu">
+      <div id="navi-root" className={`navi navi-${collapsed ? 'collapsed' : 'expanded'}`}>
+        <nav
+          className="navbar is-info is-fixed-top"
+          role="navigation"
+          style={{
+            height: collapsed ? '52px' : '100vh'
+          }}
+        >
+          <div className="navbar-menu">
             <div className="navbar-start">
               <a className="navbar-item">Home</a>
 
@@ -54,6 +80,18 @@ export class Navi extends Component {
               </div>
             </div>
 
+            <div className="navbar-brand">
+              <a className="navbar-item" href="https://bulma.io">
+                <img src={fairy} style={{ width: logoWidth, height: logoHeight }} />
+              </a>
+
+              <a role="button" className="navbar-burger burger">
+                <span />
+                <span />
+                <span />
+              </a>
+            </div>
+
             <div className="navbar-end">
               <div className="navbar-item">
                 <div className="buttons">
@@ -66,7 +104,14 @@ export class Navi extends Component {
             </div>
           </div>
         </nav>
-        <div id="navi-content">{children}</div>
+        <div
+          id="navi-content"
+          style={{
+            paddingTop: collapsed ? '52px' : '100vh'
+          }}
+        >
+          {children}
+        </div>
       </div>
     );
   }
