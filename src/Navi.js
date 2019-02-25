@@ -19,6 +19,7 @@ export class Navi extends Component {
 
   render() {
     const { collapsed } = this.state;
+    const { children } = this.props;
     return (
       <div id="navi" className={collapsed ? 'collapsed' : 'expanded'}>
         <nav className="navbar" role="navigation">
@@ -65,6 +66,7 @@ export class Navi extends Component {
             </div>
           </div>
         </nav>
+        <div id="navi-content">{children}</div>
       </div>
     );
   }
