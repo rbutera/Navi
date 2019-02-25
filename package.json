@@ -1,0 +1,10 @@
+{
+  "name": "@rstlss/navi",
+  "version": "0.0.1",
+  "description": "Beautiful Nav fit for a Hero",
+  "main": "index.js",
+  "repository": "https://github.com/raigasm/navi",
+  "author": "Rai Butera <rai@rbutera.com>",
+  "license": "CC-BY-NC-ND-4.0",
+  "private": false
+}
