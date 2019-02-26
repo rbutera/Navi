@@ -13,6 +13,10 @@ div#navi-root {
     z-index: 1000;
     .navi-logo {
       padding-top: 200px;
+
+      &.collapsed {
+        padding-top: 0px;
+      }
     }
   }
   &.navi-collapsed .navi-nav {
