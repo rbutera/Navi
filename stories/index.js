@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Navi } from '../src/Navi';
+import '../src/navi-custom.scss';
 import DemoContent from '../src/demo/content';
 
 storiesOf('Navi', module)

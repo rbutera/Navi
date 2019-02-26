@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import './Logo.scss';
 
 export function Logo(props) {
-  const { src, width, height, alt = 'Logo', onClick } = props;
+  const { src, alt = 'Logo', onClick, collapsed, scrolling } = props;
+
   return (
-    <div className="container navi-logo">
-      <img src={src} alt={alt} style={{ width, height }} onClick={onClick} />
+    <div
+      className={`container navi-logo ${scrolling ? 'scrolling' : ''} ${
+        collapsed ? 'collapsed' : ''
+      }`}
+    >
+      <img src={src} alt={alt} onClick={onClick} />
     </div>
   );
 }

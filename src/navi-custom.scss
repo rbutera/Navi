@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+div#navi-root {
+  .navi-hero {
+  }
+  &.navi.navi-expanded {
+    nav.navbar {
+    }
+    .navi-hero {
+      // background-color: red;
+    }
+  }
+
+  &.navi.navi-collapsed .navi-hero {
+  }
+
+  .navi-logo {
+    &.collapsed {
+      height: 50px;
+      width: 85px;
+    }
+
+    &.scrolling img {
+    }
+  }
+
+  .navi-logo img {
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6px;
+    height: auto;
+    width: 30vw;
+  }
+}

@@ -9,6 +9,9 @@ div#navi-root {
     right: 0;
     width: 100vw;
   }
+  nav.navbar {
+    background: black;
+  }
   &.navi.navi-expanded {
     nav.navbar {
       background: none;
@@ -17,13 +20,22 @@ div#navi-root {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: cyan;
       height: 100vh;
+      background-color: black;
+      color: white;
     }
   }
 
   &.navi.navi-collapsed .navi-hero {
     background: none;
     height: 52px;
+  }
+
+  #navi-content {
+    &.collapsed {
+      padding-top: 52px;
+    }
+
+    padding-top: calc(100vh - 52px);
   }
 }
