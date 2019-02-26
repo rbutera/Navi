@@ -9,8 +9,14 @@ div#navi-root {
     right: 0;
     width: 100vw;
   }
-  nav.navbar {
-    background: black;
+  &.navi-collapsed .navi-hero {
+    z-index: 1000;
+    .navi-logo {
+      padding-top: 200px;
+    }
+  }
+  &.navi-collapsed .navi-nav {
+    z-index: 500;
   }
   &.navi.navi-expanded {
     nav.navbar {

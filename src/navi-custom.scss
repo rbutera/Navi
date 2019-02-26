@@ -7,17 +7,32 @@
   15% {
     background-color: #2364aa;
   }
+  22% {
+    background-color: black;
+  }
   30% {
     background-color: #3da5d9;
+  }
+  37% {
+    background-color: black;
   }
   45% {
     background-color: #73bfb8;
   }
+  52% {
+    background-color: black;
+  }
   60% {
     background-color: #fec601;
   }
+  67% {
+    background-color: black;
+  }
   75% {
     background-color: #ea7317;
+  }
+  82% {
+    background-color: black;
   }
   90% {
     background-color: black;
@@ -27,24 +42,39 @@
   }
 }
 
-@-moz-keyframes myfirst /* Firefox */ {
+@-moz-keyframes herobg /* Firefox */ {
   0% {
     background-color: black;
   }
   15% {
     background-color: #2364aa;
   }
+  22% {
+    background-color: black;
+  }
   30% {
     background-color: #3da5d9;
+  }
+  37% {
+    background-color: black;
   }
   45% {
     background-color: #73bfb8;
   }
+  52% {
+    background-color: black;
+  }
   60% {
     background-color: #fec601;
   }
+  67% {
+    background-color: black;
+  }
   75% {
     background-color: #ea7317;
+  }
+  82% {
+    background-color: black;
   }
   90% {
     background-color: black;
@@ -54,24 +84,39 @@
   }
 }
 
-@-webkit-keyframes myfirst /* Safari and Chrome */ {
+@-webkit-keyframes herobg /* Safari and Chrome */ {
   0% {
     background-color: black;
   }
   15% {
     background-color: #2364aa;
   }
+  22% {
+    background-color: black;
+  }
   30% {
     background-color: #3da5d9;
+  }
+  37% {
+    background-color: black;
   }
   45% {
     background-color: #73bfb8;
   }
+  52% {
+    background-color: black;
+  }
   60% {
     background-color: #fec601;
   }
+  67% {
+    background-color: black;
+  }
   75% {
     background-color: #ea7317;
+  }
+  82% {
+    background-color: black;
   }
   90% {
     background-color: black;
@@ -84,9 +129,9 @@
 div#navi-root {
   .navi-hero {
     background-color: rgba(0, 0, 0, 0);
-    animation: herobg 30s;
-    -moz-animation: herobg 30s infinite; /* Firefox */
-    -webkit-animation: herobg 30s infinite;
+    animation: herobg 8s;
+    -moz-animation: herobg 8s infinite; /* Firefox */
+    -webkit-animation: herobg 8s infinite;
   }
   &.navi.navi-expanded {
     nav.navbar {
@@ -97,13 +142,26 @@ div#navi-root {
   }
 
   &.navi.navi-collapsed .navi-hero {
+    background: none;
+    animation: none;
+    .navi-logo {
+      width: 100%;
+      display: block;
+      height: 52px;
+      img {
+        width: 72px;
+      }
+    }
   }
 
   .navi-logo {
     &.collapsed {
       height: 50px;
       width: 85px;
+      padding-top: 0px;
     }
+
+    padding-top: 30vh;
 
     &.scrolling img {
     }

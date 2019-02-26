@@ -5,11 +5,7 @@ export function Logo(props) {
   const { src, alt = 'Logo', onClick, collapsed, scrolling } = props;
 
   return (
-    <div
-      className={`container navi-logo ${scrolling ? 'scrolling' : ''} ${
-        collapsed ? 'collapsed' : ''
-      }`}
-    >
+    <div className={`navi-logo ${scrolling ? 'scrolling' : ''} ${collapsed ? 'collapsed' : ''}`}>
       <img src={src} alt={alt} onClick={onClick} />
     </div>
   );
