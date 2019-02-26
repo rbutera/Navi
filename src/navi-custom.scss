@@ -1,7 +1,92 @@
 @charset "utf-8";
 
+@keyframes herobg {
+  0% {
+    background-color: black;
+  }
+  15% {
+    background-color: #2364aa;
+  }
+  30% {
+    background-color: #3da5d9;
+  }
+  45% {
+    background-color: #73bfb8;
+  }
+  60% {
+    background-color: #fec601;
+  }
+  75% {
+    background-color: #ea7317;
+  }
+  90% {
+    background-color: black;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+@-moz-keyframes myfirst /* Firefox */ {
+  0% {
+    background-color: black;
+  }
+  15% {
+    background-color: #2364aa;
+  }
+  30% {
+    background-color: #3da5d9;
+  }
+  45% {
+    background-color: #73bfb8;
+  }
+  60% {
+    background-color: #fec601;
+  }
+  75% {
+    background-color: #ea7317;
+  }
+  90% {
+    background-color: black;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */ {
+  0% {
+    background-color: black;
+  }
+  15% {
+    background-color: #2364aa;
+  }
+  30% {
+    background-color: #3da5d9;
+  }
+  45% {
+    background-color: #73bfb8;
+  }
+  60% {
+    background-color: #fec601;
+  }
+  75% {
+    background-color: #ea7317;
+  }
+  90% {
+    background-color: black;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
 div#navi-root {
   .navi-hero {
+    background-color: rgba(0, 0, 0, 0);
+    animation: herobg 30s;
+    -moz-animation: herobg 30s infinite; /* Firefox */
+    -webkit-animation: herobg 30s infinite;
   }
   &.navi.navi-expanded {
     nav.navbar {
