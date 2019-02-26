@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import fairy from '../logo/v2/fairy.svg';
 import { Logo } from './Logo';
 import './Navi.scss';
+import { interval } from 'rxjs';
 
 /**
  * logoOptions:
@@ -21,6 +22,7 @@ export class Navi extends Component {
   constructor(props) {
     super(props);
     const {
+      automate = false,
       fixed = true,
       collapsed = false,
       logoOptions = {
@@ -38,6 +40,32 @@ export class Navi extends Component {
       scrolling: false
     };
   }
+
+  componentDidMount = () => {
+    const { automate } = this.props;
+
+    if (automate) {
+      this.intervalSub = interval(5000).subscribe(() => {
+        const { collapsed } = this.state;
+        if (collapsed) {
+          console.log('expanding dong');
+        }
+        if (!collapsed) {
+          console.log('collapsing');
+        }
+        console.log(this);
+        this.setState({ collapsed: !collapsed });
+      });
+    }
+  };
+
+  componentWillUnmount = () => {
+    const { automate } = this.props;
+
+    if (automate) {
+      this.intervalSub.unsubscribe();
+    }
+  };
 
   expand = () => {
     this.setState({ collapsed: false });

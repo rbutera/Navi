@@ -12,24 +12,6 @@ class CollapseDemo extends Component {
     };
   }
 
-  componentDidMount = () => {
-    this.intervalSub = interval(5000).subscribe(() => {
-      const { collapsed } = this.state;
-      if (collapsed) {
-        console.log('expanding dong');
-      }
-      if (!collapsed) {
-        console.log('collapsing');
-      }
-      console.log(this);
-      this.setState({ collapsed: !collapsed });
-    });
-  };
-
-  componentWillUnmount = () => {
-    this.intervalSub.unsubscribe();
-  };
-
   expand = () => {
     this.setState({ collapsed: false });
   };
@@ -43,6 +25,7 @@ class CollapseDemo extends Component {
     return (
       <div id="navi-collapse-demo">
         <Navi collapsed={collapsed}>
+          {collapsed ? 'collapsed' : 'expanded'}
           <DemoContent />
         </Navi>
       </div>

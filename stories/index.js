@@ -15,6 +15,9 @@ storiesOf('Navi', module)
     <Navi collapsed={false}>
       <DemoContent />
     </Navi>
+  ))
+  .add('automated', () => (
+    <Navi collapsed={false} automate={true}>
+      <DemoContent />
+    </Navi>
   ));
-
-storiesOf('Automated Demos', module).add('collapse/expand', () => <CollapseDemo />);
