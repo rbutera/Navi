@@ -147,3 +147,14 @@ div#navi-root #navi-content {
   transition: width 0.5s ease-in-out;
   transition: height 0.5s ease-in-out; }
 
+.navi-hero .navi-logo {
+  z-index: 100; }
+
+#navi-root .navi-logo {
+  display: block; }
+  #navi-root .navi-logo img {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0; }
