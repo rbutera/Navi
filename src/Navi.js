@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { interval } from 'rxjs';
+import * as Rx from 'rx-dom';
 import fairy from '../logo/v2/fairy-logo.svg';
 import { Logo } from './Logo';
 import './Navi.scss';
@@ -26,6 +27,7 @@ export class Navi extends Component {
       automate = false,
       fixed = true,
       collapsed = false,
+      collapseAt = '52px',
       logoOptions = {
         classes: {
           expanded: ['expanded'],
@@ -45,6 +47,10 @@ export class Navi extends Component {
   componentDidMount = () => {
     const { automate } = this.props;
 
+    this.scrollSub = Rx.DOM.scroll(document).subscribe(event => {
+      this.getScrollPosition();
+    });
+
     if (automate) {
       this.intervalSub = interval(3000).subscribe(() => {
         this.setState({ collapsed: !this.state.collapsed });
@@ -57,6 +63,28 @@ export class Navi extends Component {
 
     if (automate) {
       this.intervalSub.unsubscribe();
+    }
+
+    if (this.scrollSub && this.scrollSub.unsubscribe) {
+      this.scrollSub.unsubscribe();
+    }
+  };
+
+  getScrollPosition = () => {
+    const distanceY = window.pageYOffset || document.documentElement.scrollTop;
+    const { collapseAt } = this.props;
+    // console.debug(`getScrollPosition:\tdistanceY = ${distanceY}, collapseAt = ${collapseAt}`);
+    // console.debug(`document.documentElement.scrollTop = ${document.documentElement.scrollTop}`);
+    console.debug('props', this.props);
+
+    if (distanceY > collapseAt) {
+      if (!this.props.collapsed && !this.state.collapsed) {
+        this.collapse();
+      }
+    } else if (distanceY <= collapseAt) {
+      if (!this.props.collapsed && this.state.collapsed) {
+        this.expand();
+      }
     }
   };
 

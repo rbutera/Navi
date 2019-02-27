@@ -9,34 +9,34 @@ import RSTLSS from '../src/demo/rstlss-logo.svg';
 
 storiesOf('Navi', module)
   .add('collapsed', () => (
-    <Navi logo={fairy} collapsed>
+    <Navi logo={fairy} collapseAt="1" collapsed>
       <DemoContent />
     </Navi>
   ))
   .add('expanded', () => (
-    <Navi logo={fairy} collapsed={false}>
+    <Navi logo={fairy} collapseAt="1" collapsed={false}>
       <DemoContent />
     </Navi>
   ))
   .add('autotoggle', () => (
-    <Navi logo={fairy} collapsed={false} automate={true}>
+    <Navi logo={fairy} collapseAt="1" collapsed={false} automate={true}>
       <DemoContent />
     </Navi>
   ));
 
 storiesOf('Custom Logo', module)
   .add('collapsed', () => (
-    <Navi logo={RSTLSS} collapsed={true} automate={false}>
+    <Navi logo={RSTLSS} collapseAt="1" collapsed={true} automate={false}>
       <DemoContent />
     </Navi>
   ))
   .add('expanded', () => (
-    <Navi logo={RSTLSS} collapsed={false} automate={false}>
+    <Navi logo={RSTLSS} collapseAt="1" collapsed={false} automate={false}>
       <DemoContent />
     </Navi>
   ))
   .add('autotoggle', () => (
-    <Navi logo={RSTLSS} collapsed={false} automate={true}>
+    <Navi logo={RSTLSS} collapseAt="1" collapsed={false} automate={true}>
       <DemoContent />
     </Navi>
   ));
