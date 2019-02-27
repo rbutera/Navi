@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { interval } from 'rxjs';
 import fairy from '../logo/v2/fairy.svg';
+import logo from '../../media/logo/v3/full-default.svg';
 import { Logo } from './Logo';
 import './Navi.scss';
-import { interval } from 'rxjs';
 
 /**
  * logoOptions:
@@ -45,16 +46,8 @@ export class Navi extends Component {
     const { automate } = this.props;
 
     if (automate) {
-      this.intervalSub = interval(5000).subscribe(() => {
-        const { collapsed } = this.state;
-        if (collapsed) {
-          console.log('expanding dong');
-        }
-        if (!collapsed) {
-          console.log('collapsing');
-        }
-        console.log(this);
-        this.setState({ collapsed: !collapsed });
+      this.intervalSub = interval(3000).subscribe(() => {
+        this.setState({ collapsed: !this.state.collapsed });
       });
     }
   };
@@ -135,7 +128,7 @@ export class Navi extends Component {
         </div>
         <div className="navi-hero">
           <Logo
-            src={fairy}
+            src={logo}
             collapsed={collapsed}
             scrolling={scrolling}
             alt="Navi"

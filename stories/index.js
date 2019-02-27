@@ -16,7 +16,7 @@ storiesOf('Navi', module)
       <DemoContent />
     </Navi>
   ))
-  .add('automated', () => (
+  .add('autotoggle', () => (
     <Navi collapsed={false} automate={true}>
       <DemoContent />
     </Navi>

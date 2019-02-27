@@ -148,7 +148,9 @@ div#navi-root {
       width: 100%;
       display: block;
       height: 52px;
+      transition: all 0.2s;
       img {
+        transition: all 0.2s ease-in-out;
         width: 72px;
       }
     }
@@ -159,9 +161,11 @@ div#navi-root {
       height: 50px;
       width: 85px;
       padding-top: 0px;
+      margin-top: 15px;
     }
 
-    padding-top: 30vh;
+    padding-top: 40vh;
+    transition: all 0.2s ease-in-out;
 
     &.scrolling img {
     }

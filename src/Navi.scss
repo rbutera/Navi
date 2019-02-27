@@ -31,6 +31,7 @@ div#navi-root {
       top: 0;
       left: 0;
       height: 100vh;
+      transition: height 1s;
       color: white;
     }
   }
@@ -41,10 +42,17 @@ div#navi-root {
   }
 
   #navi-content {
+    transition: padding 0.5s;
+    transition-timing-function: ease-in-out;
     &.collapsed {
       padding-top: 52px;
     }
 
     padding-top: calc(100vh - 52px);
   }
+}
+
+.navi-hero {
+  transition: height 0.5s;
+  transition-timing-function: ease-in-out;
 }
