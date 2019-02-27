@@ -24,24 +24,10 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 export class Navi extends Component {
   constructor(props) {
     super(props);
-    const {
-      logo = fairy,
-      automate = false,
-      fixed = true,
-      collapsed = false,
-      collapseAt = '52px',
-      logoOptions = {
-        classes: {
-          expanded: ['expanded'],
-          collapsed: ['collapsed'],
-          final: ['final']
-        }
-      }
-    } = props;
+    const { fixed = true, collapsed = false } = props;
     this.state = {
       fixed,
       collapsed,
-      logoOptions,
       scrolling: false
     };
   }
@@ -96,14 +82,6 @@ export class Navi extends Component {
 
   collapse = () => {
     this.setState({ collapsed: true });
-  };
-
-  scrolling = () => {
-    this.setState({ collapsed: true, scrolling: true });
-  };
-
-  atTop = () => {
-    this.setState({ collapsed: false, scrolling: false });
   };
 
   render() {
