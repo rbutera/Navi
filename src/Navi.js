@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { interval } from 'rxjs';
 import * as Rx from 'rx-dom';
-import fairy from '../logo/v2/fairy.svg';
 import { Logo } from './Logo';
 import './Navi.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -93,7 +92,7 @@ export class Navi extends Component {
         <div className="navi-nav">{navbar({ fixed, collapsed })}</div>
         <div className="navi-hero">
           <Logo
-            src={logo || fairy}
+            src={logo}
             collapsed={collapsed}
             scrolling={scrolling}
             alt="Navi"
