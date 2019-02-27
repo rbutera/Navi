@@ -1,8 +1,8 @@
 {
   "name": "@rstlss/navi",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Beautiful Nav fit for a Hero",
-  "main": "src/index.js",
+  "main": "dist/Navi.js",
   "repository": "https://github.com/raigasm/navi",
   "author": "Rai Butera <rai@rbutera.com>",
   "license": "CC-BY-NC-ND-4.0",
@@ -26,6 +26,7 @@
     "@storybook/react": "^4.1.13",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^1.0.1",
     "eslint": "^5.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.0.0",
@@ -42,13 +43,14 @@
     "react-hot-loader": "^4.7.1",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.2.0"
+    "webpack-dev-server": "^3.2.0",
+    "webpack-merge": "^4.2.1"
   },
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
     "sb": "start-storybook -p 9001 -c .storybook",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "webpack-dev-server"
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --open --config webpack.dev.js"
   }
 }

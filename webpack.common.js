@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   module: {
@@ -36,9 +36,5 @@ module.exports = {
     publicPath: '/',
     filename: 'Navi.js'
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
-  devServer: {
-    contentBase: './dist',
-    hot: true
-  }
+  plugins: [new CleanWebpackPlugin(['dist'])]
 };
