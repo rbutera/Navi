@@ -233,9 +233,9 @@
         }), React__default.createElement("div", {
           className: "navi-scrolldown"
         }, React__default.createElement("div", {
-          class: "navi-scrolldown-text"
+          className: "navi-scrolldown-text"
         }, "Scroll"), React__default.createElement("div", {
-          class: "navi-scrolldown-arrow"
+          className: "navi-scrolldown-arrow"
         }, React__default.createElement(reactFontawesome.FontAwesomeIcon, {
           icon: freeSolidSvgIcons.faChevronDown,
           size: "3x"

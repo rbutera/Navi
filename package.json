@@ -1,6 +1,6 @@
 {
   "name": "@rstlss/navi",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Beautiful Nav fit for a Hero",
   "main": "dist/Navi.js",
   "repository": "https://github.com/raigasm/navi",
