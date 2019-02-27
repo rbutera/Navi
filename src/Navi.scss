@@ -42,10 +42,12 @@ div#navi-root {
     z-index: 1000;
     transition: all 0.3s ease-in-out;
     .navi-logo {
+      transition: all 0.3s ease-in-out;
       padding-top: 200px;
       position: fixed;
       &.collapsed {
         padding-top: 0px;
+        transition: all 0.3s ease-in-out;
       }
     }
   }
@@ -167,5 +169,22 @@ div#navi-root {
     background: rgba(0, 0, 0, 0);
     opacity: 0;
     background-color: black;
+  }
+}
+
+#navi-root.navi,
+#navi-root.navi.navi-expanded {
+  .navi-logo {
+    // filter: invert(0%);
+    // transition: filter 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+    transition: height 0.5s ease-in-out;
+  }
+}
+#navi-root.navi.navi-collapsed {
+  .navi-logo {
+    filter: invert(100%);
+    transition: width 0.5s ease-in-out;
+    transition: height 0.5s ease-in-out;
   }
 }

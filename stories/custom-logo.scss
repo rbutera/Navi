@@ -1,0 +1,12 @@
+.custom-logo #navi-root.navi,
+.custom-logo #navi-root.navi.navi-expanded {
+  .navi-logo {
+    filter: invert(0%);
+    transition: filter 0.5s ease-in-out;
+  }
+}
+.custom-logo #navi-root.navi.navi-collapsed {
+  .navi-logo {
+    filter: invert(100%);
+  }
+}

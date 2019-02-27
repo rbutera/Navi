@@ -130,6 +130,7 @@ div#navi-root {
   .navi-hero-background {
     background-image: url('https://source.unsplash.com/random');
     background-size: cover;
+    background-position: center;
     transition: opacity 0.5s ease-in-out;
   }
   nav.navbar {
@@ -175,6 +176,7 @@ div#navi-root {
 
     padding-top: 40vh;
     transition: all 0.2s ease-in-out;
+    transition: padding 0.5s ease-in-out;
 
     &.scrolling img {
     }
@@ -183,6 +185,8 @@ div#navi-root {
   .navi-logo img {
     transition: all 1s ease-in-out;
     transition: filter 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
     cursor: pointer;
     display: block;
     margin-left: auto;
@@ -190,16 +194,33 @@ div#navi-root {
     // padding: 6px;
     height: auto;
     width: 30vw;
+    .collapsed &,
+    .navi-collapsed & {
+      transition: width 0.3s ease-in-out;
+      transition: height 0.3s ease-in-out;
+    }
   }
 }
 
+// .navi-hero-overlay {
+//   background: rgb(2, 0, 36);
+//   background: linear-gradient(
+//     180deg,
+//     rgba(0, 0, 0, 1) 0%,
+//     rgba(0, 0, 0, 1) 5%,
+//     rgba(0, 0, 0, 0) 35%,
+//     rgba(0, 0, 0, 0) 100%
+//   );
+// }
 .navi-hero-overlay {
-  background: rgb(2, 0, 36);
+  background: rgba(0, 0, 0, 0.1);
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 5%,
-    rgba(0, 0, 0, 0) 35%,
-    rgba(0, 0, 0, 0) 100%
+    rgba(0, 0, 0, 0.75) 6%,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0) 95%,
+    rgba(0, 0, 0, 0.1) 97%,
+    rgba(0, 0, 0, 0.2) 100%
   );
 }

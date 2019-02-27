@@ -24,19 +24,4 @@ storiesOf('Navi', module)
     </Navi>
   ));
 
-storiesOf('Custom Logo', module)
-  .add('collapsed', () => (
-    <Navi logo={RSTLSS} collapseAt="1" collapsed={true} automate={false}>
-      <DemoContent />
-    </Navi>
-  ))
-  .add('expanded', () => (
-    <Navi logo={RSTLSS} collapseAt="1" collapsed={false} automate={false}>
-      <DemoContent />
-    </Navi>
-  ))
-  .add('autotoggle', () => (
-    <Navi logo={RSTLSS} collapseAt="1" collapsed={false} automate={true}>
-      <DemoContent />
-    </Navi>
-  ));
+require('./custom-logo.story.js');
