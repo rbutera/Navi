@@ -101,8 +101,8 @@ export class Navi extends Component {
             }}
           />
           <div className="navi-scrolldown">
-            <div class="navi-scrolldown-text">Scroll</div>
-            <div class="navi-scrolldown-arrow">
+            <div className="navi-scrolldown-text">Scroll</div>
+            <div className="navi-scrolldown-arrow">
               <FontAwesomeIcon icon={faChevronDown} size="3x" />
             </div>
           </div>
