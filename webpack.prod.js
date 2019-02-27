@@ -17,7 +17,7 @@ module.exports = merge(common, {
     ]
   },
   output: {
-    libraryTarget: 'commonjs',
+    libraryTarget: 'umd',
     library: '@rstlss/navi',
     path: __dirname + '/dist',
     publicPath: '/',

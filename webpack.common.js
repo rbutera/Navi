@@ -25,7 +25,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['.scss', '.js', '.json', '.png', '.gif', '.jpg', '.svg']
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),

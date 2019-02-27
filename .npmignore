@@ -4,3 +4,4 @@ webpack.dev.config.js
 .eslintrc
 .gitignore
 demo/
+logo/

@@ -1,15 +1,3 @@
-.navi-hero .navi-logo {
-  z-index: 100; }
-
-#navi-root .navi-logo {
-  display: block; }
-  #navi-root .navi-logo img {
-    cursor: pointer;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0; }
-
 @-webkit-keyframes pulse {
   0% {
     opacity: 0; }
