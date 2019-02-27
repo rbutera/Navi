@@ -211,7 +211,8 @@
         var _this$props = this.props,
             logo = _this$props.logo,
             children = _this$props.children,
-            navbar = _this$props.navbar;
+            navbar = _this$props.navbar,
+            herobg = _this$props.herobg;
         return React__default.createElement("div", {
           id: "navi-root",
           className: "navi navi-".concat(collapsed ? 'collapsed' : 'expanded')
@@ -243,7 +244,7 @@
           className: "navi-hero-overlay"
         }), React__default.createElement("div", {
           className: "navi-hero-background"
-        })), React__default.createElement("div", {
+        }, herobg && herobg)), React__default.createElement("div", {
           id: "navi-content",
           className: "".concat(collapsed ? 'collapsed' : '')
         }, children));
