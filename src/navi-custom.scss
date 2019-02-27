@@ -141,13 +141,16 @@ div#navi-root {
   }
 
   &.navi.navi-collapsed .navi-hero {
+    pointer-events: none;
     background: none;
     animation: none;
     .navi-logo {
       width: 100%;
       display: block;
       height: 52px;
+      padding-top: 2px;
       img {
+        pointer-events: auto;
         max-height: 36px;
         transition: all 0.5s ease-in-out;
         width: 100px;
