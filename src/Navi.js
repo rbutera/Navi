@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { interval } from 'rxjs';
-import fairy from '../logo/v2/fairy.svg';
-import logo from '../../media/logo/v3/full-default.svg';
+import fairy from '../logo/v2/fairy-logo.svg';
 import { Logo } from './Logo';
 import './Navi.scss';
 
@@ -23,6 +22,7 @@ export class Navi extends Component {
   constructor(props) {
     super(props);
     const {
+      logo = fairy,
       automate = false,
       fixed = true,
       collapsed = false,
@@ -78,7 +78,7 @@ export class Navi extends Component {
 
   render() {
     const { collapsed, fixed, scrolling } = this.state;
-    const { children } = this.props;
+    const { logo, children } = this.props;
 
     return (
       <div id="navi-root" className={`navi navi-${collapsed ? 'collapsed' : 'expanded'}`}>

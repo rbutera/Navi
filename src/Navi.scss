@@ -48,7 +48,7 @@ div#navi-root {
     transition: padding 0.5s;
     transition-timing-function: ease-in-out;
     &.collapsed {
-      padding-top: 52px;
+      padding-top: 0px;
     }
 
     padding-top: calc(100vh - 52px);
@@ -75,7 +75,9 @@ div#navi-root {
   top: 0;
   left: 0;
   transition: all 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
   .navi-collapsed & {
+    transition: height 0s;
     display: inline-block;
     height: 0px;
     width: 100%;
