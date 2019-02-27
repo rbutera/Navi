@@ -19,6 +19,20 @@ storiesOf('Navi', module)
       <DemoContent />
     </Navi>
   ))
+  .add('expanded with custom herobg content', () => (
+    <Navi
+      navbar={Navbar}
+      herobg={
+        <>
+          <p>this is custom herobg content</p>
+        </>
+      }
+      collapseAt="1"
+      collapsed={false}
+    >
+      <DemoContent />
+    </Navi>
+  ))
   .add('autotoggle', () => (
     <Navi navbar={Navbar} collapseAt="1" collapsed={false} automate={true}>
       <DemoContent />

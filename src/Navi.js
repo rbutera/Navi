@@ -85,7 +85,7 @@ export class Navi extends Component {
 
   render() {
     const { collapsed, fixed, scrolling } = this.state;
-    const { logo, children, navbar } = this.props;
+    const { logo, children, navbar, herobg } = this.props;
 
     return (
       <div id="navi-root" className={`navi navi-${collapsed ? 'collapsed' : 'expanded'}`}>
@@ -107,7 +107,7 @@ export class Navi extends Component {
             </div>
           </div>
           <div className="navi-hero-overlay" />
-          <div className="navi-hero-background" />
+          <div className="navi-hero-background">{herobg && herobg}</div>
         </div>
 
         <div id="navi-content" className={`${collapsed ? 'collapsed' : ''}`}>
