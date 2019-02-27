@@ -6,20 +6,21 @@ import DemoContent from '../src/demo/content';
 import CollapseDemo from '../src/demo/collapse';
 
 import RSTLSS from '../src/demo/rstlss-logo.svg';
+import Navbar from '../src/demo/navbar';
 
 storiesOf('Navi', module)
   .add('collapsed', () => (
-    <Navi collapseAt="1" collapsed>
+    <Navi navbar={Navbar} collapseAt="1" collapsed>
       <DemoContent />
     </Navi>
   ))
   .add('expanded', () => (
-    <Navi collapseAt="1" collapsed={false}>
+    <Navi navbar={Navbar} collapseAt="1" collapsed={false}>
       <DemoContent />
     </Navi>
   ))
   .add('autotoggle', () => (
-    <Navi collapseAt="1" collapsed={false} automate={true}>
+    <Navi navbar={Navbar} collapseAt="1" collapsed={false} automate={true}>
       <DemoContent />
     </Navi>
   ));
