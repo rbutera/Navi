@@ -1,6 +1,6 @@
 {
   "name": "@rstlss/navi",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "Beautiful Nav fit for a Hero",
   "main": "dist/Navi.js",
   "repository": "https://github.com/raigasm/navi",
@@ -38,7 +38,9 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "file-loader": "^3.0.1",
+    "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
+    "postcss-loader": "^3.0.0",
     "prettier": "^1.16.4",
     "react-hot-loader": "^4.7.1",
     "webpack": "^4.29.5",
