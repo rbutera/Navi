@@ -8,6 +8,9 @@
   "license": "CC-BY-NC-ND-4.0",
   "private": false,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "css-loader": "^2.1.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",

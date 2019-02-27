@@ -127,13 +127,19 @@
 }
 
 div#navi-root {
-  .navi-hero {
+  .navi-hero-background {
     background-image: url('https://source.unsplash.com/random');
     background-size: cover;
     transition: background 0.25s ease-in-out;
   }
+  nav.navbar {
+    background-color: rgba(0, 0, 0, 1);
+    transition: background 0s ease-in-out;
+  }
   &.navi.navi-expanded {
     nav.navbar {
+      background-color: rgba(0, 0, 0, 0);
+      transition: background 0.5s ease-in-out;
     }
     .navi-hero {
       // background-color: red;
@@ -142,7 +148,7 @@ div#navi-root {
 
   &.navi.navi-collapsed .navi-hero {
     pointer-events: none;
-    background: none;
+    // background: none;
     animation: none;
     .navi-logo {
       width: 100%;

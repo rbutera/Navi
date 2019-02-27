@@ -4,6 +4,8 @@ import * as Rx from 'rx-dom';
 import fairy from '../logo/v2/fairy-logo.svg';
 import { Logo } from './Logo';
 import './Navi.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 /**
  * logoOptions:
@@ -164,7 +166,14 @@ export class Navi extends Component {
               alert('clicked Navi');
             }}
           />
+          <div className="navi-scrolldown">
+            <div class="navi-scrolldown-text">Scroll</div>
+            <div class="navi-scrolldown-arrow">
+              <FontAwesomeIcon icon={faChevronDown} size="3x" />
+            </div>
+          </div>
           <div className="navi-hero-overlay" />
+          <div className="navi-hero-background" />
         </div>
 
         <div id="navi-content" className={`${collapsed ? 'collapsed' : ''}`}>

@@ -1,5 +1,34 @@
 @charset "utf-8";
 
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 div#navi-root {
   .navi-hero {
     display: block;
@@ -11,6 +40,7 @@ div#navi-root {
   }
   &.navi-collapsed .navi-hero {
     z-index: 1000;
+    transition: all 0.3s ease-in-out;
     .navi-logo {
       padding-top: 200px;
       position: fixed;
@@ -33,14 +63,14 @@ div#navi-root {
       top: 0;
       left: 0;
       height: 100vh;
-      transition: height 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       color: white;
       z-index: 0;
     }
   }
 
   &.navi.navi-collapsed .navi-hero {
-    background: none;
+    // background: none;
     height: 52px;
   }
 
@@ -82,5 +112,60 @@ div#navi-root {
     height: 0px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.navi-scrolldown {
+  text-transform: uppercase;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  position: absolute;
+  display: inline-block;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  bottom: 2vh;
+  animation: pulse 4s infinite;
+  .navi-scrolldown-text {
+    opacity: 1;
+    margin: 0 auto;
+    display: inline-block;
+    transition: opacity 1s ease-in-out;
+    .navi-collapsed & {
+      opacity: 0;
+      transition: opacity 0s;
+    }
+  }
+  .navi-scrolldown-arrow {
+    opacity: 1;
+    margin: 0 auto;
+    display: block;
+
+    transition: opacity 1s ease-in-out;
+    .navi-collapsed & {
+      opacity: 0;
+      transition: opacity 0s;
+    }
+  }
+}
+
+.navi-hero-background {
+  pointer-events: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  transition: opacity 10s;
+  background-color: black;
+  .navi-collapsed & {
+    transition: opacity 10s;
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+    background-color: black;
   }
 }
