@@ -130,7 +130,7 @@ div#navi-root {
   .navi-hero-background {
     background-image: url('https://source.unsplash.com/random');
     background-size: cover;
-    transition: background 0.25s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
   }
   nav.navbar {
     background-color: rgba(0, 0, 0, 1);
@@ -160,7 +160,7 @@ div#navi-root {
         max-height: 36px;
         transition: all 0.5s ease-in-out;
         width: 100px;
-        filter: invert(100);
+        // filter: invert(100);
       }
     }
   }

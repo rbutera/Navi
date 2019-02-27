@@ -4,22 +4,22 @@ import { Navi } from '../src/Navi';
 import '../src/navi-custom.scss';
 import DemoContent from '../src/demo/content';
 import CollapseDemo from '../src/demo/collapse';
-import fairy from '../logo/v2/fairy-logo.svg';
+
 import RSTLSS from '../src/demo/rstlss-logo.svg';
 
 storiesOf('Navi', module)
   .add('collapsed', () => (
-    <Navi logo={fairy} collapseAt="1" collapsed>
+    <Navi collapseAt="1" collapsed>
       <DemoContent />
     </Navi>
   ))
   .add('expanded', () => (
-    <Navi logo={fairy} collapseAt="1" collapsed={false}>
+    <Navi collapseAt="1" collapsed={false}>
       <DemoContent />
     </Navi>
   ))
   .add('autotoggle', () => (
-    <Navi logo={fairy} collapseAt="1" collapsed={false} automate={true}>
+    <Navi collapseAt="1" collapsed={false} automate={true}>
       <DemoContent />
     </Navi>
   ));

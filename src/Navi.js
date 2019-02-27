@@ -1,11 +1,59 @@
 import React, { Component } from 'react';
 import { interval } from 'rxjs';
 import * as Rx from 'rx-dom';
-import fairy from '../logo/v2/fairy-logo.svg';
+import fairy from '../logo/v2/fairy.svg';
 import { Logo } from './Logo';
 import './Navi.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
+function Navbar(props) {
+  const { fixed, collapsed } = props;
+  return (
+    <nav
+      className={`navbar is-black is-transparent ${fixed && collapsed ? 'is-fixed-top' : ''}`}
+      role="navigation"
+    >
+      <div className="navbar-brand">
+        <a role="button" className="navbar-burger burger">
+          <span />
+          <span />
+          <span />
+        </a>
+      </div>
+      <div className="navbar-menu">
+        <div className="navbar-start">
+          <a className="navbar-item">Home</a>
+
+          <a className="navbar-item">Documentation</a>
+
+          <div className="navbar-item has-dropdown is-hoverable">
+            <a className="navbar-link">More</a>
+
+            <div className="navbar-dropdown">
+              <a className="navbar-item">About</a>
+              <a className="navbar-item">Jobs</a>
+              <a className="navbar-item">Contact</a>
+              <hr className="navbar-divider" />
+              <a className="navbar-item">Report an issue</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="navbar-end">
+          <div className="navbar-item">
+            <div className="buttons">
+              <a className="button is-primary">
+                <strong>Sign up</strong>
+              </a>
+              <a className="button is-light">Log in</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}
 
 /**
  * logoOptions:
@@ -113,52 +161,11 @@ export class Navi extends Component {
     return (
       <div id="navi-root" className={`navi navi-${collapsed ? 'collapsed' : 'expanded'}`}>
         <div className="navi-nav">
-          <nav
-            className={`navbar is-black is-transparent ${fixed && collapsed ? 'is-fixed-top' : ''}`}
-            role="navigation"
-          >
-            <div className="navbar-menu">
-              <div className="navbar-brand">
-                <a role="button" className="navbar-burger burger">
-                  <span />
-                  <span />
-                  <span />
-                </a>
-              </div>
-              <div className="navbar-start">
-                <a className="navbar-item">Home</a>
-
-                <a className="navbar-item">Documentation</a>
-
-                <div className="navbar-item has-dropdown is-hoverable">
-                  <a className="navbar-link">More</a>
-
-                  <div className="navbar-dropdown">
-                    <a className="navbar-item">About</a>
-                    <a className="navbar-item">Jobs</a>
-                    <a className="navbar-item">Contact</a>
-                    <hr className="navbar-divider" />
-                    <a className="navbar-item">Report an issue</a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="navbar-end">
-                <div className="navbar-item">
-                  <div className="buttons">
-                    <a className="button is-primary">
-                      <strong>Sign up</strong>
-                    </a>
-                    <a className="button is-light">Log in</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
+          <Navbar collapsed={collapsed} fixed={fixed} />
         </div>
         <div className="navi-hero">
           <Logo
-            src={logo}
+            src={logo || fairy}
             collapsed={collapsed}
             scrolling={scrolling}
             alt="Navi"
