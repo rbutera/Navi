@@ -128,10 +128,9 @@
 
 div#navi-root {
   .navi-hero {
-    background-color: rgba(0, 0, 0, 0);
-    animation: herobg 8s;
-    -moz-animation: herobg 8s infinite; /* Firefox */
-    -webkit-animation: herobg 8s infinite;
+    background-image: url('https://source.unsplash.com/random');
+    background-size: cover;
+    transition: background 0.25s ease-in-out;
   }
   &.navi.navi-expanded {
     nav.navbar {
@@ -148,10 +147,10 @@ div#navi-root {
       width: 100%;
       display: block;
       height: 52px;
-      transition: all 0.2s;
       img {
-        transition: all 0.2s ease-in-out;
-        width: 72px;
+        transition: all 0.5s ease-in-out;
+        width: 100px;
+        filter: invert(100);
       }
     }
   }
@@ -161,7 +160,7 @@ div#navi-root {
       height: 50px;
       width: 85px;
       padding-top: 0px;
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     padding-top: 40vh;
@@ -172,6 +171,8 @@ div#navi-root {
   }
 
   .navi-logo img {
+    transition: all 1s ease-in-out;
+    transition: filter 0.3s ease-in-out;
     cursor: pointer;
     display: block;
     margin-left: auto;
@@ -180,4 +181,15 @@ div#navi-root {
     height: auto;
     width: 30vw;
   }
+}
+
+.navi-hero-overlay {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 0, 1) 11%,
+    rgba(0, 0, 0, 0) 74%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }

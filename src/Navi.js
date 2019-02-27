@@ -84,7 +84,7 @@ export class Navi extends Component {
       <div id="navi-root" className={`navi navi-${collapsed ? 'collapsed' : 'expanded'}`}>
         <div className="navi-nav">
           <nav
-            className={`navbar ${fixed && collapsed ? 'is-fixed-top' : 'is-dark is-transparent'}`}
+            className={`navbar is-black is-transparent ${fixed && collapsed ? 'is-fixed-top' : ''}`}
             role="navigation"
           >
             <div className="navbar-menu">
@@ -136,6 +136,7 @@ export class Navi extends Component {
               alert('clicked Navi');
             }}
           />
+          <div className="navi-hero-overlay" />
         </div>
 
         <div id="navi-content" className={`${collapsed ? 'collapsed' : ''}`}>
