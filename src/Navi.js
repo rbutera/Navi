@@ -85,7 +85,7 @@ export class Navi extends Component {
 
   render() {
     const { collapsed, fixed, scrolling } = this.state;
-    const { logo, children, navbar, herobg } = this.props;
+    const { logo, children, navbar, herobg, onClick } = this.props;
 
     return (
       <div id="navi-root" className={`navi navi-${collapsed ? 'collapsed' : 'expanded'}`}>
@@ -96,9 +96,7 @@ export class Navi extends Component {
             collapsed={collapsed}
             scrolling={scrolling}
             alt="Navi"
-            onClick={() => {
-              alert('clicked Navi');
-            }}
+            onClick={onClick}
           />
           <div className="navi-scrolldown">
             <div className="navi-scrolldown-text">Scroll</div>
