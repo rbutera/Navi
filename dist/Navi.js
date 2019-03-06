@@ -212,7 +212,8 @@
             logo = _this$props.logo,
             children = _this$props.children,
             navbar = _this$props.navbar,
-            herobg = _this$props.herobg;
+            herobg = _this$props.herobg,
+            onClick = _this$props.onClick;
         return React__default.createElement("div", {
           id: "navi-root",
           className: "navi navi-".concat(collapsed ? 'collapsed' : 'expanded')
@@ -228,9 +229,7 @@
           collapsed: collapsed,
           scrolling: scrolling,
           alt: "Navi",
-          onClick: function onClick() {
-            alert('clicked Navi');
-          }
+          onClick: onClick
         }), React__default.createElement("div", {
           className: "navi-scrolldown"
         }, React__default.createElement("div", {
